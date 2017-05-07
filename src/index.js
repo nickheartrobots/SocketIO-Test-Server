@@ -6,12 +6,11 @@ const app = express;
 const server = http.Server(app);
 const io = new SocketIO(server);
 
-// const port = process.env.PORT || 47236;
-console.log(PORT);
+const PORT = process.env.PORT || 47236;
 
 server.listen(PORT, () => {
-    console.log("Server is now running...");
-});
+    console.log(`Server is now running on ${ PORT }...`);
+})
 
 io.on('connection', (socket) => {
     console.log("Player Connected!");

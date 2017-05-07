@@ -18,8 +18,10 @@ var app = _express2.default;
 var server = _http2.default.Server(app);
 var io = new _socket2.default(server);
 
-server.listen(47236, function () {
-    console.log("Server is now running...");
+var PORT = process.env.PORT || 47236;
+
+server.listen(PORT, function () {
+    console.log('Server is now running on ' + PORT + '...');
 });
 
 io.on('connection', function (socket) {

@@ -6,7 +6,10 @@ const app = express;
 const server = http.Server(app);
 const io = new SocketIO(server);
 
-server.listen(47236, () => {
+const port = process.env.PORT || 47236;
+console.log(port);
+
+server.listen(port, () => {
     console.log("Server is now running...");
 });
 

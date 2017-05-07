@@ -6,10 +6,10 @@ const app = express;
 const server = http.Server(app);
 const io = new SocketIO(server);
 
-const port = process.env.PORT || 47236;
-console.log(port);
+// const port = process.env.PORT || 47236;
+console.log(PORT);
 
-server.listen(port, () => {
+server.listen(PORT, () => {
     console.log("Server is now running...");
 });
 

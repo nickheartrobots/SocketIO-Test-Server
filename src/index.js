@@ -6,7 +6,7 @@ const app = express;
 const server = http.Server(app);
 const io = new SocketIO(server);
 
-server.listen(8080, () => {
+server.listen(47236, () => {
     console.log("Server is now running...");
 });
 

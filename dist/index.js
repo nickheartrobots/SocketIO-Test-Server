@@ -18,11 +18,17 @@ var app = _express2.default;
 var server = _http2.default.Server(app);
 var io = new _socket2.default(server);
 
+//process.env.PORT is the constant for Heroku automatically assigned port
+//if on Heroku, use their port, otherwise use 47236
 var PORT = process.env.PORT || 47236;
 
 server.listen(PORT, function () {
     console.log('Server is now running on ' + PORT + '...');
 });
+
+setInterval(function () {
+    console.log('Server running on ' + PORT + '...');
+}, 30000);
 
 io.on('connection', function (socket) {
     console.log("Player Connected!");

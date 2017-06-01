@@ -28,7 +28,7 @@ server.listen(PORT, function () {
 
 setInterval(function () {
     console.log('Server running on ' + PORT + '...');
-}, 30000);
+}, 300000);
 
 io.on('connection', function (socket) {
     console.log("Player Connected!");

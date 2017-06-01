@@ -16,7 +16,7 @@ server.listen(PORT, () => {
 
 setInterval(() => {
     console.log(`Server running on ${ PORT }...`);
-}, 30000)
+}, 300000)
 
 io.on('connection', (socket) => {
     console.log("Player Connected!");

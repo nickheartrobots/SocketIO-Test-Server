@@ -35,6 +35,10 @@ io.on('connection', function (socket) {
     socket.emit('socketID', { id: socket.id });
     socket.broadcast.emit('newPlayer', { id: socket.id });
 
+    socket.on('disconnectMe', function () {
+        socket.disconnect();
+    });
+
     socket.on('disconnect', function () {
         console.log("Player Disconnected");
     });

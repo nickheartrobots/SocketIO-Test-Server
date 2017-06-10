@@ -40,7 +40,7 @@ io.on('connection', function (socket) {
     });
 
     socket.on('disconnect', function () {
-        console.log("Player Disconnected");
+        console.log("Player Disconnected - Bitch!");
     });
 });
 //# sourceMappingURL=index.js.map
